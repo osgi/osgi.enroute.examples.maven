@@ -1,8 +1,11 @@
 <h1><img src="http://enroute.osgi.org/img/enroute-logo-64.png" witdh=40px style="float:left;margin: 0 1em 1em 0;width:40px">
-OSGi enRoute Archetype</h1>
+OSGi enRoute Maven Example</h1>
 
-This repository represents a template workspace for bndtools, it is the easiest way to get started with OSGi enRoute. The workspace is useful in an IDE (bndtools or Intellij) and has support for [continuous integration][2] with [gradle][3]. If you want to get started with enRoute, then follow the steps in the [quick-start guide][1].
+This OSGi enRoute Workspace is used to demonstrate the Bnd Maven Repository plugin. You should visit the [OSGi enRoute Maven Tutorial] for a detailed explanation. It has the following projects:
 
-[1]: http://enroute.osgi.org/quick-start.html
-[2]: http://enroute.osgi.org/tutorial_base/800-ci.html
-[3]: https://www.gradle.org/
+ * [osgi.enroute.example.eval.api] – A simple API project that is part of the Bndtools workspace. It will be installed in the local Maven repo and released to  a Nexus repo.
+ * [osgi.enroute.example.eval.application] – A simple gogo command in Bndtools that uses a Maven project.
+ * [osgi.enroute.example.eval.provider] – A maven project that provides the provider
+  
+
+[OSGi enRoute Maven Tutorial]: http://localhost:4000/tutorial_maven/050-start
