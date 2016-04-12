@@ -1,0 +1,23 @@
+#
+# OSGI ENROUTE EXAMPLES EVAL API
+#
+
+Bundle-Version:1.0.0.${tstamp}
+Bundle-Description: 				\
+	A simple API project to demonstrate the Maven Bnd Repository 
+
+	
+Export-Package:  \
+	osgi.enroute.examples.eval.api;provide:=true
+
+Bundle-License: \
+	https://opensource.org/licenses/Apache-2.0; \
+		link=http://www.apache.org/licenses/LICENSE-2.0; \
+		description="Apache Software License 2.0"
+	
+Require-Capability: \
+	compile-only
+
+-buildpath: \
+	osgi.enroute.base.api;version=1.0
+

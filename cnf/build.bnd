@@ -1,0 +1,35 @@
+#
+# Create a maven repository backed by a local Nexus
+#
+
+
+-plugin.4.Central = \
+	\
+	        aQute.bnd.deployer.repository.wrapper.Plugin; \
+	            location            =	"${build}/cache/wrapper"; \
+	            reindex				=	true, \
+	\
+	        aQute.bnd.repository.maven.provider.MavenBndRepository; \
+				releaseUrl			=	https://repo.maven.apache.org/maven2/; \
+				name				=	Central
+
+-plugin.6.Local: \
+	\
+       		aQute.bnd.repository.maven.provider.MavenBndRepository; \
+				name				=	Local
+
+
+-plugin.9.Release: \
+	\
+       		aQute.bnd.repository.maven.provider.MavenBndRepository; \
+	        	releaseUrl			=   http://localhost:8081/nexus/content/repositories/releases/ ; \
+	        	snapshotUrl			=   http://localhost:8081/nexus/content/repositories/snapshots/ ; \
+				name				=	Release
+
+
+-connection-settings: ${.}/settings.txt
+-maven-release:			remote
+-installrepo: 			Local
+-releaserepo			Release
+-pom: 					groupid	=	osgi.enroute.examples,\
+						version =	${versionmask;===;${@version}}-SNAPSHOT

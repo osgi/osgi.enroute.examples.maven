@@ -1,0 +1,3 @@
+osgi.enroute.examples:osgi.enroute.examples.eval.api:1.0.0-SNAPSHOT
+osgi.enroute.examples:osgi.enroute.examples.eval.application:1.0.0-SNAPSHOT
+osgi.enroute.examples:osgi.enroute.examples.eval.gogo:1.0.0-SNAPSHOT

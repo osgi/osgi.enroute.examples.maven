@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1460370626000" name="Release" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="osgi.enroute.examples.eval.api"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201604111026"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="cb8bca4098856431beaa4ffb88081ff9f083e372b24e7ce658c70a43746fb4a7"/>
+      <attribute name="url" value="osgi.enroute.examples.eval.api/osgi.enroute.examples.eval.api-1.0.0.jar"/>
+      <attribute name="size" type="Long" value="5311"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="osgi.enroute.examples.eval.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201604111026"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="osgi.enroute.examples.eval.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201604111026"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="osgi.enroute.examples.eval.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.enroute.examples.eval.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201604111026"/>
+    </capability>
+    <requirement namespace="compile-only"/>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="osgi.enroute.examples.eval.application"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201604111025"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="de059beed3fc52f6341cc2363d3885ab198cc81d4614a875c4a0960925a6aa4e"/>
+      <attribute name="url" value="osgi.enroute.examples.eval.application/osgi.enroute.examples.eval.application-1.0.0.jar"/>
+      <attribute name="size" type="Long" value="5744"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="osgi.enroute.examples.eval.application"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201604111025"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="osgi.enroute.examples.eval.application"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201604111025"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="osgi.enroute.examples.eval.gogo.EvalCommand"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="osgi.enroute.examples.eval.gogo.EvalCommand"/>
+      <attribute name="osgi.command.function" value="expr"/>
+      <attribute name="osgi.command.scope" value="eval"/>
+      <directive name="uses" value="osgi.enroute.examples.eval.gogo"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=osgi.enroute.examples.eval.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=osgi.enroute.examples.eval.api.Eval)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=osgi.enroute.examples.eval.api.Eval)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+</repository>
