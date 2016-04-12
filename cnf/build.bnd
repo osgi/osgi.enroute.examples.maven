@@ -27,9 +27,8 @@
 				name				=	Release
 
 
--connection-settings: ${.}/settings.txt
--maven-release:			remote
--installrepo: 			Local
+-connection-settings 	${.}/settings.txt
+-buildrepo: 			Local
 -releaserepo			Release
 -pom: 					groupid	=	osgi.enroute.examples,\
 						version =	${versionmask;===;${@version}}-SNAPSHOT
