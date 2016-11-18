@@ -8,4 +8,4 @@ This OSGi enRoute Workspace is used to demonstrate the Bnd Maven Repository plug
  * [osgi.enroute.example.eval.provider] – A maven project that provides the provider
   
 
-[OSGi enRoute Maven Tutorial]: http://localhost:4000/tutorial_maven/050-start
+[OSGi enRoute Maven Tutorial]: http://enroute.osgi.org/tutorial_maven/050-start.html
